@@ -3,14 +3,14 @@
 
   & .button {
     @apply inline-flex justify-center items-center w-full py-2 text-neutral-100 rounded-md;
-    @apply transition-all duration-100;
+    @apply transition-all duration-150;
 
     &:hover, &[aria-expanded="true"] {
       @apply bg-neutral-600 text-white;
     }
 
     &:focus, &:focus-within, &:active {
-      @apply ring-2 ring-opacity-50 ring-neutral-300 text-white;
+      @apply ring-2 ring-opacity-50 ring-sky-400 text-white;
     }
 
     & svg {
@@ -24,6 +24,7 @@
 
   & .items_container {
     @apply absolute right-0 mt-2 origin-top-right bg-neutral-900 rounded z-10;
+    border: 1px solid rgba(79, 195, 247, 0.12);
   }
 }
 
@@ -35,7 +36,7 @@
   }
 
   &:hover, &:focus {
-    @apply bg-blue-500 text-blue-50;
+    @apply bg-blue-600 text-blue-50;
 
     & svg {
       @apply text-blue-50;

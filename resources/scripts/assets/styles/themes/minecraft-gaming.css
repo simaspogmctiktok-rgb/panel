@@ -1,0 +1,58 @@
+/**
+ * Minecraft Gaming Dark Theme
+ *
+ * A dark blue gaming theme inspired by Minecraft's water, ice, and sky palette.
+ * Primary accent: #4FC3F7 (light blue - Minecraft water/ice)
+ * Secondary accent: #2196F3 (vibrant blue)
+ *
+ * This file provides supplemental global overrides layered on top of the
+ * Tailwind utility classes defined in the component CSS modules.
+ */
+
+:root {
+    --mc-bg-deep:       #0a0e17;
+    --mc-bg-dark:       #141b2d;
+    --mc-bg-card:       #1a2332;
+    --mc-accent-light:  #4FC3F7;
+    --mc-accent-blue:   #2196F3;
+    --mc-green:         #4CAF50;
+    --mc-gold:          #FFC107;
+    --mc-red:           #F44336;
+    --mc-text-primary:  #ffffff;
+    --mc-text-secondary:#B0BEC5;
+}
+
+/* ─── Progress bar ─────────────────────────────────────────────────────────── */
+#nprogress .bar {
+    background: var(--mc-accent-light) !important;
+    box-shadow: 0 0 8px var(--mc-accent-light), 0 0 4px var(--mc-accent-light);
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--mc-accent-light), 0 0 5px var(--mc-accent-light);
+}
+
+/* ─── Selection highlight ───────────────────────────────────────────────────── */
+::selection {
+    background-color: rgba(79, 195, 247, 0.25);
+    color: #ffffff;
+}
+
+/* ─── Link accent ───────────────────────────────────────────────────────────── */
+a.mc-link {
+    color: var(--mc-accent-light);
+    transition: color 0.15s ease;
+}
+
+a.mc-link:hover {
+    color: #81d4fa;
+}
+
+/* ─── Gaming glow utilities ─────────────────────────────────────────────────── */
+.mc-glow {
+    box-shadow: 0 0 12px rgba(79, 195, 247, 0.35);
+}
+
+.mc-glow-hover:hover {
+    box-shadow: 0 0 16px rgba(79, 195, 247, 0.45);
+}

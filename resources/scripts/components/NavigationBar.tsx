@@ -6,7 +6,7 @@ import { faCogs, faLayerGroup, faSignOutAlt } from '@fortawesome/free-solid-svg-
 import { useStoreState } from 'easy-peasy';
 import { ApplicationStore } from '@/state';
 import SearchContainer from '@/components/dashboard/search/SearchContainer';
-import tw, { theme } from 'twin.macro';
+import tw from 'twin.macro';
 import styled from 'styled-components/macro';
 import http from '@/api/http';
 import SpinnerOverlay from '@/components/elements/SpinnerOverlay';
@@ -27,7 +27,7 @@ const RightNavigation = styled.div`
         &:active,
         &:hover,
         &.active {
-            box-shadow: inset 0 -2px ${theme`colors.cyan.600`.toString()};
+            box-shadow: inset 0 -2px #4FC3F7;
         }
     }
 `;
@@ -46,15 +46,16 @@ export default () => {
     };
 
     return (
-        <div className={'w-full bg-neutral-900 shadow-md overflow-x-auto'}>
+        <div css={tw`w-full shadow-md overflow-x-auto`} style={{ background: 'linear-gradient(90deg, #0a0e17 0%, #141b2d 100%)', borderBottom: '1px solid rgba(79, 195, 247, 0.15)' }}>
             <SpinnerOverlay visible={isLoggingOut} />
             <div className={'mx-auto w-full flex items-center h-[3.5rem] max-w-[1200px]'}>
                 <div id={'logo'} className={'flex-1'}>
                     <Link
                         to={'/'}
                         className={
-                            'text-2xl font-header font-medium px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
+                            'text-2xl font-header font-medium px-4 no-underline transition-colors duration-150'
                         }
+                        style={{ color: '#4FC3F7' }}
                     >
                         {name}
                     </Link>
